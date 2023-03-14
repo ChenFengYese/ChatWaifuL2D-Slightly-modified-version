@@ -50,6 +50,18 @@ conda activate chatWaifu <br>
 
 pip install -r requirements.txt <br>
 
+Create the model folder in the ChatWaifuService.py sibling <br>
+
+Download the model file and put it into the model, a.pth file, a.json file. <br>
+
+Create another folder in the model named CN <br>
+
+Just put the Chinese model in <br>
+
+The problem of model character names being different from game names can be fixed in script.rpy of ChatWaifuGameL2D\game <br>
+
+ 
+
 python ChatWaifuService.py <br>
 
 Run ChatWaifuL2D.exe in ChatWaifuGameL2D <br>
