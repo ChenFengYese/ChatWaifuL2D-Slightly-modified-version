@@ -12,12 +12,12 @@
 * [x] 更加便捷的操作
 * [x] 维持对话同时可更改语音
 * [x] 支持自定义编辑资源
-
-开放资源模型链接:https://pan.baidu.com/s/121CO4acg6qCWZY9-PIKobA?pwd=hana&_at_=1678763047948#list/path=%2F&parentPath=%2F&login_type=qzone
-开放资源UP主视频:https://www.bilibili.com/video/BV1Jj411P77b/?spm_id_from=333.788.recommend_more_video.6&vd_source=31b7ae374762015e760da95b804fe7bf
-开放资源UP主视频2:https://www.bilibili.com/video/BV1TD4y1E7e8/?spm_id_from=333.880.my_history.page.click&vd_source=31b7ae374762015e760da95b804fe7bf
-感谢下列B站up主共享资源:
-B站Up主@当个扫帚 @addone123
+<br>
+开放资源模型链接:https://pan.baidu.com/s/121CO4acg6qCWZY9-PIKobA?pwd=hana&_at_=1678763047948#list/path=%2F&parentPath=%2F&login_type=qzone  <br>
+开放资源UP主视频:https://www.bilibili.com/video/BV1Jj411P77b/?spm_id_from=333.788.recommend_more_video.6&vd_source=31b7ae374762015e760da95b804fe7bf  <br>
+开放资源UP主视频2:https://www.bilibili.com/video/BV1TD4y1E7e8/?spm_id_from=333.880.my_history.page.click&vd_source=31b7ae374762015e760da95b804fe7bf  <br>
+感谢下列B站up主共享资源: <br>
+B站Up主@当个扫帚 @addone123 <br>
 
 # 运行方法
 
