@@ -1,4 +1,4 @@
-! [cover](readme/chatwaifu.png)
+
 
 
 
