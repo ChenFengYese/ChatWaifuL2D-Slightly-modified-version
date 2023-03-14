@@ -34,7 +34,7 @@ Open UP the video resources: https://www.bilibili.com/video/BV1Jj411P77b/?spm_id
 
 Open UP resources main video 2:https://www.bilibili.com/video/BV1TD4y1E7e8/?spm_id_from=333.880.my_history.page.click&vd_source=31b7ae374762   <br>
 
-Thanks to the following B station up master shared resource: <br>
+Thanks to the following Bilibili up master shared resource: <br>
 
 B Stand Up and be a broom @addone123
 
