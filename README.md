@@ -1,4 +1,4 @@
-![cover](readme/chatwaifu.png)
+
 
 [中文](README.md "中文") [English](eng-README.md "English") 
 
