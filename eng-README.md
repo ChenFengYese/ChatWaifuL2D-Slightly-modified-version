@@ -28,11 +28,11 @@
 
 <br>
 
-The open source model links: https://pan.baidu.com/s/121CO4acg6qCWZY9-PIKobA?pwd=hana&_at_=1678763047948#list/path=%2F&parentPath=%2F&login_ type=qzone  <br>
+The open source model links: https://pan.baidu.com/s/121CO4acg6qCWZY9-PIKobA?pwd=hana&_at_=1678763047948#list/path=%2F&parentPath=%2F&login_  <br>
 
-Open UP the video resources: https://www.bilibili.com/video/BV1Jj411P77b/?spm_id_from=333.788.recommend_more_video.6&vd_source=31b7ae374762 015e760da95b804fe7bf  <br>
+Open UP the video resources: https://www.bilibili.com/video/BV1Jj411P77b/?spm_id_from=333.788.recommend_more_video.6&vd_source=31b7ae374762  <br>
 
-Open UP resources main video 2:https://www.bilibili.com/video/BV1TD4y1E7e8/?spm_id_from=333.880.my_history.page.click&vd_source=31b7ae374762 015e760da95b804fe7bf  <br>
+Open UP resources main video 2:https://www.bilibili.com/video/BV1TD4y1E7e8/?spm_id_from=333.880.my_history.page.click&vd_source=31b7ae374762   <br>
 
 Thanks to the following B station up master shared resource: <br>
 
