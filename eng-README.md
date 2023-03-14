@@ -2,7 +2,7 @@
 
 
 
-[English](eng-README.md "English") (README.md "Chinese")
+[English](eng-README.md "English") [Chinese](README.md "Chinese")
 
 
 
