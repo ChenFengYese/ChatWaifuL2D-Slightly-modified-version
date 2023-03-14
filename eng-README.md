@@ -2,7 +2,7 @@
 
 
 
-[English](eng-README.md "English") (eng-README.md "English")
+[English](eng-README.md "English") (README.md "Chinese")
 
 
 
@@ -10,7 +10,7 @@
 
 
 
-&gt;  ### This is a TTS+VITS based ChatGPT voice dialog program!
+ ### This is a TTS+VITS based ChatGPT voice dialog program!
 
 
 
