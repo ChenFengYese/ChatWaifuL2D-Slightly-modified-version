@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 50, in script
+    python:
+  File "game/script.rpy", line 52, in <module>
+    client.send(token.encode())
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 50, in script
+    python:
+  File "D:\ChatGPT\ChatWaifuL2D-main\ChatWaifuGameL2D\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\ChatGPT\ChatWaifuL2D-main\ChatWaifuGameL2D\renpy\python.py", line 1061, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 52, in <module>
+    client.send(token.encode())
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+
+Windows-10-10.0.22000 AMD64
+Ren'Py 8.0.3.22090809
+ChatWaifuL2D 3.0
+Tue Mar 14 22:22:44 2023
