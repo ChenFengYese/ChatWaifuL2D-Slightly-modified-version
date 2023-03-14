@@ -21,16 +21,16 @@ B站Up主@当个扫帚 @addone123 <br>
 
 # 运行方法
 
-conda create --name chatWaifu python=3.10
-conda activate chatWaifu
-pip install -r requirements.txt
-python ChatWaifuService.py
-运行ChatWaifuGameL2D中的ChatWaifuL2D.exe即可
+conda create --name chatWaifu python=3.10 <br>
+conda activate chatWaifu <br>
+pip install -r requirements.txt <br>
+python ChatWaifuService.py <br>
+运行ChatWaifuGameL2D中的ChatWaifuL2D.exe即可 <br>
 
 
 
-## <span id="915">6.鸣谢：</span>
-- [MoeGoe_GUI]https://github.com/CjangCjengh/MoeGoe_GUI
+## <span id="915">6.鸣谢：</span> 
+- [MoeGoe_GUI]https://github.com/CjangCjengh/MoeGoe_GUI 
 - [Pretrained models]https://github.com/CjangCjengh/TTSModels
-- [PyChatGPT]https://github.com/terry3041/pyChatGPT
+- [PyChatGPT]https://github.com/terry3041/pyChatGPT <br>
   [ChatWaifuL2D]cjyaddone/ChatWaifuL2D: An Renpy enabled ver of ChatWaifu (github.com)
