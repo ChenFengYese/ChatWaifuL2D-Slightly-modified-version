@@ -29,8 +29,8 @@ python ChatWaifuService.py <br>
 
 
 
-## <span id="915">6.鸣谢：</span> 
+## <span id="915">鸣谢：</span> 
 - [MoeGoe_GUI]https://github.com/CjangCjengh/MoeGoe_GUI 
 - [Pretrained models]https://github.com/CjangCjengh/TTSModels
 - [PyChatGPT]https://github.com/terry3041/pyChatGPT <br>
-  [ChatWaifuL2D]cjyaddone/ChatWaifuL2D: An Renpy enabled ver of ChatWaifu (github.com)
+- [ChatWaifuL2D][cjyaddone/ChatWaifuL2D: An Renpy enabled ver of ChatWaifu (github.com)](https://github.com/cjyaddone/ChatWaifuL2D)
