@@ -36,7 +36,7 @@ Open UP resources main video 2:https://www.bilibili.com/video/BV1TD4y1E7e8/?spm_
 
 Thanks to the following Bilibili up master shared resource: <br>
 
-B Stand Up and be a broom @addone123
+Bilibili up @当个扫帚 @addone123
 
 
 
