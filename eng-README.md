@@ -72,7 +72,7 @@ Run ChatWaifuL2D.exe in ChatWaifuGameL2D <br>
 
 
 
-## <span> </span>
+## <span id="915">Give thanks：</span> 
 
 - [MoeGoe_GUI]https://github.com/CjangCjengh/MoeGoe_GUI
 
