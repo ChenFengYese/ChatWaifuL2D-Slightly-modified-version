@@ -1,4 +1,4 @@
-﻿# 游戏的脚本可置于此文件中。
+# 游戏的脚本可置于此文件中。
 
 # 声明此游戏使用的角色。颜色参数可使角色姓名着色。
 
@@ -33,7 +33,22 @@ label start:
     show hiyori m01
 
     #show eileen happy
+    jump OutPutLanguageDisplay
+    return
 
+label OutPutLanguageDisplay:
+    $ renpy.block_rollback()
+    menu OutPutLanguageDisplayChoice: #input 2
+        e "Please select the interface display language"
+
+        "中文":
+            #block of code to run
+            jump OutPutChineseDisplay
+        "English":
+            jump OutPutEnglishDisplay
+
+label OutPutChineseDisplay:
+    $ renpy.block_rollback()
     # 此处显示各行对话。
     e "让我们开始吧,可以在ChatWaifuServer中修改为你本人的api,可以在ChatWaifuGameL2D的Game的script.rpy中修改为自己想要的音色,音色对照表在源目录的character.txt中,建议修改前进行备份"
     e "日文对话时,为了看懂会让chatgpt同时返回中文,但有时可能会失效,需要经常借助翻译软件噢"
@@ -41,9 +56,16 @@ label start:
     e "一般来说即使返回标题页面重新进入也是之前的chatgpt,即可以持续对话,但控制台如果程序error报错且说 等待UI连接,那就会中断"
     e "由于网络和缓存问题,有时可能会出现答非所问的现象,这时不要输入话语,不断点击让他把之前没说完的话说完就行,一般出现在返回标题页面重进之后的情况下"
     e "不想对话后记得关闭控制台"
-
     jump connectIf
-    return
+label OutPutEnglishDisplay:
+    $ renpy.block_rollback()
+    e  "Let's get started. You can modify your api in ChatWaifuServer. You can modify it in script.rpy of Game ChatWaifuGameL2D to the sound you want. The sound map is in the source directory character.txt."
+    e "When conversing in Japanese, chatgpt will also be sent back to Chinese in order to understand it, but sometimes it will not work. You need to use translation software frequently."
+    e "Try not to return to the title interface many times to restart, there may be unknown bugs, always look at the console requirements"
+    e "In general, even if you return to the title page and re-enter the same chatgpt as before, that is, you can continue the conversation, but the console will interrupt if the program makes an error and waits for the UI to connect."
+    e "Due to network and caching issues, sometimes there may be a problem of not answering the question, then do not type the words, just keep clicking to let him finish what he didn't say before, usually after returning to the title page and reentering"
+    e "Remember to turn off the console after you don't want to talk"
+    jump connectIfEnglish
 label connectIf:
     $ renpy.block_rollback()
     show hiyori m01
@@ -67,11 +89,34 @@ label connectIf:
 
     jump checkToken
 
+label connectIfEnglish:
+    $ renpy.block_rollback()
+    show hiyori m01
+    python:
+        token = "1"
+        client.send(token.encode())
+    menu inputMethod1: #input 1
+        e "Is the connection normal? Please be sure to watch the console prompt operation, if not connected to select no, select the wrong to open again"
+
+        "Connected":
+            jump checkToken
+        "disconnected":
+            e "Trying to reconnect"
+            python:
+                ip_port = ('127.0.0.1', 9000)
+                client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                client.connect(ip_port)
+                token = "1"
+                client.send(token.encode())
+
+
+    jump checkToken
+
     
 
 label checkToken:
     $ renpy.block_rollback()
-    e "正在等待程序加载..."
+    e "正在等待程序加载...(Loading)"
     if (thinking == 0):
         show hiyori m03
 
@@ -84,11 +129,11 @@ label checkToken:
                 client.setblocking(1)
     
     if(len(data) > 0):
-        e "程序加载完成，我们进入下一步吧"
+        e "程序加载完成，我们进入下一步吧(Finish)"
         $ thinking = 0
         jump inputMethod
     else:
-        e "正在等待程序加载......"
+        e "正在等待程序加载......(Loading)"
         $ thinking == 1
         jump inputMethod
 
@@ -97,14 +142,14 @@ label inputMethod:
     $ renpy.block_rollback()
     show hiyori m01
     menu inputMethod1: #input 1
-        e "请选择输入方式"
+        e "请选择输入方式(input mode)"
 
-        "键盘输入":
+        "键盘输入(Keyboard input)":
             python:
                 client.send(("0").encode())
                 keyboard = True
             jump outputMethod
-        "语音输入":
+        "语音输入(Voice input)":
             python:
                 client.send(("1").encode())
                 keyboard = False
@@ -115,7 +160,7 @@ label inputMethod:
 label voiceInputMethod:
     $ renpy.block_rollback()
     menu inputLanguageChoice: #input 2
-        e "请选择输入语言"
+        e "请选择输入语言(InputLanguage)"
 
         "中文":
             #block of code to run
@@ -127,7 +172,7 @@ label voiceInputMethod:
             python:
                 client.send(("1").encode())
             jump outputMethod
-        "英语":
+        "English":
             python:
                 client.send(("2").encode())
             jump outputMethod
@@ -136,7 +181,7 @@ label voiceInputMethod:
 label outputMethod:
     $ renpy.block_rollback()
     menu languageChoice: #input 3
-        e "请选择输出语言"
+        e "请选择输出语言(OutputLanguage)"
 
         "中文":
             #block of code to run
@@ -148,12 +193,17 @@ label outputMethod:
             python:
                 client.send(("1").encode())
             jump modelChoiceJP
+        "英语(English)":
+            #block of code to run
+            python:
+                client.send(("2").encode())
+            jump modelChoiceJP
 
-        
+
 label modelChoiceCN:
     $ renpy.block_rollback()
     menu CNmodelChoice: #input 4
-        e "我们来选择一个角色作为语音输出"
+        e "我们来选择一个角色作为语音输出(choose a role as voice output)"
 
         "綾地寧々":
             python:
