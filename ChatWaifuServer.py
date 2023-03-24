@@ -1,3 +1,6 @@
+import os
+import time
+
 from scipy.io.wavfile import write
 from text import text_to_sequence
 from models import SynthesizerTrn
@@ -14,6 +17,7 @@ import sounddevice as sd
 from vosk import Model, KaldiRecognizer
 import json
 import openai
+import psutil
 
 chinese_model_path = ".\model\CN\model.pth"
 chinese_config_path = ".\model\CN\config.json"
@@ -35,6 +39,13 @@ def int_or_str(text):
         return int(text)
     except ValueError:
         return text
+
+
+def proc_exist(process_name):
+    pl = psutil.pids()
+    for pid in pl:
+        if psutil.Process(pid).name() == process_name:
+            return pid
 
 
 def callback(indata, frames, time, status):
@@ -221,9 +232,14 @@ if __name__ == "__main__":
     while True:
         try:
             print("链接已生成，等待UI连接")
+            time.sleep(2)  # 等待上次进程完全关闭
+            if isinstance(proc_exist('ChatWaifuL2D.exe'), int):
+                print('ChatWaifuL2D is running')
+            else:
+                os.startfile(r"chatWaifuGameL2D\ChatWaifuL2D.exe")
             client, client_addr = s.accept()
             print("链接已建立,等待接受api")
-            openai.api_key = "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"
+            openai.api_key = "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"
             messages = []
             total_data = bytes()
             while True:
@@ -255,6 +271,8 @@ if __name__ == "__main__":
                 print("设置为中文输出")
             elif outputMethod == 1:
                 print("设置为日语输出")
+            elif outputMethod == 2:
+                print("设置为英文输出")
 
             speaker = int(client.recv(1024).decode())  # outputMethod: CN/JP
             print(speaker)
@@ -280,6 +298,8 @@ if __name__ == "__main__":
                         question = question + " . 先使用日本语回答,然后再以'接下来是中文回复：'开头来用中文回答"
                     if outputMethod == 0 and (inputVoice == 1 or inputVoice == 2 or inputVoice == -1):
                         question = question + " .使用中文回答"
+                    if outputMethod == 2 and (inputVoice == 1 or inputVoice == 2 or inputVoice == -1):
+                        question = question + " .please speak in English"
 
                     messages.append(
                         {"role": "user", "content": question}
@@ -298,6 +318,7 @@ if __name__ == "__main__":
                         answerG = "[ZH]" + answer + "[ZH]"
                     else:
                         answerG = answer
+                        outputMethod = 1
                     print("ChatGPT:")
                     print(answer)
 
@@ -312,11 +333,16 @@ if __name__ == "__main__":
                     client.send(answer.encode())
                     # finish playing audio
                     print(client.recv(1024).decode())
+                except ConnectionResetError:
+                    print("链接已断开")
+                    break
                 except Exception as e:
                     print(e)
                     continue
 
-
+        except ConnectionResetError:
+            print("链接已断开")
+            break
         except Exception as e:
             print(e)
             continue
