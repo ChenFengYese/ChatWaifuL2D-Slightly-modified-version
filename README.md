@@ -12,6 +12,13 @@
 * [x] 更加便捷的操作
 * [x] 维持对话同时可更改语音
 * [x] 支持自定义编辑资源
+启动时自动执行L2D程序<br>
+添加英文文本支持<br>
+选择角色选择时文本依旧为中文<br>
+请根据Characters.txt文件自行进行搜索<br>
+可以在ChatWaifuGameL2D\game目录的script.rpy的203行进行角色语音选择的更改<br>
+label modelChoiceCN:下就是角色语音选择界面<br>
+模型文件分别命名为G5000.pth和Gconfig.json或者自行在代码中修改<br><br>
 <br>
 开放资源模型链接:https://pan.baidu.com/s/121CO4acg6qCWZY9-PIKobA?pwd=hana&_at_=1678763047948#list/path=%2F&parentPath=%2F&login_type=qzone  <br>
 开放资源UP主视频:https://www.bilibili.com/video/BV1Jj411P77b/?spm_id_from=333.788.recommend_more_video.6&vd_source=31b7ae374762015e760da95b804fe7bf  <br>
