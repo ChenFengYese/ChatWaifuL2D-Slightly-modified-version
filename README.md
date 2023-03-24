@@ -27,14 +27,14 @@ conda activate chatWaifu <br>
 pip install -r requirements.txt <br>
 
 -模型放置: <br>
-在ChatWaifuService.py 同级目录下创建model文件夹 <br>
+在ChatWaifuServer.py 同级目录下创建model文件夹 <br>
 下载模型文件,并放到model里面,一个.pth文件,一个.json文件.<br>
 在model里再创建一个名为CN的文件夹<br>
 将中文模型放进去即可<br>
 模型角色名子与游戏名不同的问题可以在ChatWaifuGameL2D\game的script.rpy中进行修改<br>
 
 -运行: <br>
-python ChatWaifuService.py <br>
+python ChatWaifuServer.py <br>
 
 运行ChatWaifuGameL2D中的ChatWaifuL2D.exe即可 <br>
 
