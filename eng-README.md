@@ -62,7 +62,7 @@ The problem of model character names being different from game names can be fixe
 
  
 
-python ChatWaifuService.py <br>
+python ChatWaifuServer.py <br>
 
 Run ChatWaifuL2D.exe in ChatWaifuGameL2D <br>
 
