@@ -67,7 +67,7 @@ pip install -r requirements.txt <br>
 
 Create the model folder in the ChatWaifuService.py sibling <br>
 
-Download the model file and put it into the model, a.pth file, a.json file. <br>
+Download the model file and put it into the model, rename them as G5000.pth file, Gconfig.json file. <br>
 
 Create another folder in the model named CN <br>
 
