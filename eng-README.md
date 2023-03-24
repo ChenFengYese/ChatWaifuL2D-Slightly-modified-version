@@ -27,6 +27,21 @@
 * [x] Supports user-defined editing resources
 
 <br>
+Automatically executes the L2D program at startup<br>
+
+Added English text support<br>
+
+When selecting a role, the text is still in Chinese<br>
+
+Please search your own Characters.txt file<br>
+
+Changes to character voice selection can be made on line 203 of script.rpy in the ChatWaifuGameL2D\game directory<br>
+
+label modelChoiceCN: Below is the role voice selection interface<br>
+
+The model files are named G5000.pth and Gconfig.json or you can change them in your code<br>
+
+
 
 The open source model links: https://pan.baidu.com/s/121CO4acg6qCWZY9-PIKobA?pwd=hana&_at_=1678763047948#list/path=%2F&parentPath=%2F&login_  <br>
 
