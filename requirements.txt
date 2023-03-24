@@ -20,3 +20,5 @@ openai
 vosk
 sounddevice
 pydub
+psutil
+
